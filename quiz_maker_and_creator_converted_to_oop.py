@@ -9,6 +9,10 @@ class Question:
     def check_answer(self, user_answer):
         # check if the user's answer is correct.
         return user_answer.strip().lower() == self.correct_answer.lower()
+
 # create a class for quiz
+class Quiz:
+    def __init__(self, filename):
+        self.questions = self.load_questions(filename)
 # load questions from a file
 # conduct the quiz with the user
