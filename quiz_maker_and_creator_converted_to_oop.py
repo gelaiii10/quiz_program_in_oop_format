@@ -34,3 +34,11 @@ class Quiz:
             print("Correct!")
         else:
             print(f"Incorrect! The correct answer is: {question.correct_answer}")
+
+def main():
+    quiz = Quiz('quiz_program.txt')  
+    quiz.quiz_user()
+
+
+if __name__ == "__main__":
+    main()
