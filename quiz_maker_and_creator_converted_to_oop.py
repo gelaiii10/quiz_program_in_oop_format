@@ -23,4 +23,14 @@ class Quiz:
                 question_text, correct_answer = line.strip().split(';')
                 questions.append(Question(question_text, correct_answer))
         return questions
-# conduct the quiz with the user
+    
+    def quiz_user(self):
+        # conduct the quiz with the user
+        question = random.choice(self.questions)
+        print("Question: " + question.question_text)
+        user_answer = input("Your answer: ")
+
+        if question.check_answer(user_answer):
+            print("Correct!")
+        else:
+            print(f"Incorrect! The correct answer is: {question.correct_answer}")
